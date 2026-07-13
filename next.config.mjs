@@ -1,14 +1,10 @@
 /** @type {import('next').NextConfig} */
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-
 const nextConfig = {
-  output: "export",
-  trailingSlash: true,
-  basePath,
   images: {
-    unoptimized: true,
-    formats: ["image/avif", "image/webp"]
-  }
+    formats: ["image/avif", "image/webp"],
+    remotePatterns: [{ protocol: "https", hostname: "**.supabase.co" }]
+  },
+  serverExternalPackages: ["sharp"]
 };
 
 export default nextConfig;
