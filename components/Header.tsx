@@ -36,6 +36,7 @@ export function Header() {
         {links.map(([label, href], index) => <a className={index === 0 ? "active" : ""} href={href} key={href}>{label}</a>)}
       </nav>
       <div className="header-actions">
+        <a className="client-access" href="/client-login">Client Access</a>
         <a href="https://instagram.com" aria-label="Instagram"><Instagram size={16} /></a>
         <a href="https://facebook.com" aria-label="Facebook"><Facebook size={16} /></a>
         <button className="icon-button" onClick={() => setOpen(true)} aria-label="Open menu" aria-expanded={open}><Menu size={19} /></button>
@@ -50,6 +51,7 @@ export function Header() {
               {links.map(([label, href], index) => (
                 <motion.a href={href} key={href} onClick={() => setOpen(false)} initial={reduceMotion ? false : { opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: index * .04 }}>{label}<span>0{index + 1}</span></motion.a>
               ))}
+              <motion.a className="mobile-client-access" href="/client-login" onClick={() => setOpen(false)} initial={reduceMotion ? false : { opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }}>Client Access<span>07</span></motion.a>
             </nav>
             <p>Crafted by vision.<br />Powered by AI.</p>
           </motion.div>

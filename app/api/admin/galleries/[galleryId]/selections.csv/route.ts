@@ -1,0 +1,7 @@
+import { NextResponse } from "next/server";
+import { requireAdmin } from "@/lib/auth/session";
+import { createAdminClient } from "@/lib/supabase/admin";
+import { safeFileName, uuidSchema } from "@/lib/validation/schemas";
+
+const quote = (value: unknown) => `"${String(value ?? "").replaceAll('"','""')}"`;
+export async function GET(_: Request, { params }: { params: Promise<{ galleryId: string }> }) { await requireAdmin(); const galleryId = uuidSchema.parse((await params).galleryId); const admin = createAdminClient(); const { data: gallery } = await admin.from("galleries").select("title").eq("id",galleryId).single(); const { data } = await admin.from("image_selections").select("status,is_favourite,updated_at,profiles(full_name,email),gallery_images(original_filename)").eq("gallery_id",galleryId); const rows = ["filename,status,favourite,client,email,updated_at",...(data || []).map((row) => [quote((row.gallery_images as unknown as { original_filename: string })?.original_filename),quote(row.status),quote(row.is_favourite),quote((row.profiles as unknown as { full_name: string })?.full_name),quote((row.profiles as unknown as { email: string })?.email),quote(row.updated_at)].join(","))]; return new NextResponse(rows.join("\r\n"), { headers: { "Content-Type":"text/csv; charset=utf-8", "Content-Disposition":`attachment; filename="${safeFileName(gallery?.title || "gallery")}-selections.csv"`, "Cache-Control":"private, no-store" } }); }

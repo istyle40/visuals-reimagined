@@ -35,7 +35,7 @@ export function ContentSections() {
       </section>
 
       <footer>
-        <div className="footer-top"><Logo /><p>Luxury AI photography crafted for brands,<br />creators, and dreamers.</p><div><a href="#gallery">Gallery</a><a href="#about">About</a><a href="#services">Services</a><a href="#contact">Contact</a></div><div><a href="https://instagram.com">Instagram</a><a href="https://facebook.com">Facebook</a><a href="mailto:hello@visualsreimagined.com">Email</a></div></div>
+        <div className="footer-top"><Logo /><p>Luxury AI photography crafted for brands,<br />creators, and dreamers.</p><div><a href="#gallery">Gallery</a><a href="#about">About</a><a href="#services">Services</a><a href="#contact">Contact</a><a href="/client-login">Client Gallery Access</a></div><div><a href="https://instagram.com">Instagram</a><a href="https://facebook.com">Facebook</a><a href="mailto:hello@visualsreimagined.com">Email</a></div></div>
         <div className="footer-bottom"><span>© {new Date().getFullYear()} Visuals Reimagined</span><div><a href="#">Privacy</a><a href="#">Terms</a></div></div>
       </footer>
     </>
