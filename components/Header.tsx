@@ -44,7 +44,7 @@ export function Header() {
       <AnimatePresence>
         {open && (
           <motion.div className="mobile-menu" role="dialog" aria-label="Mobile navigation" aria-modal="true"
-            initial={reduceMotion ? false : { opacity: 0, x: "100%" }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: "100%" }} transition={{ duration: .35, ease: [.22,1,.36,1] }}>
+            initial={reduceMotion ? false : { x: "100%" }} animate={{ x: 0 }} exit={{ x: "100%" }} transition={{ duration: .35, ease: [.22,1,.36,1] }}>
             <div className="mobile-menu-top"><Logo /><button className="icon-button" onClick={() => setOpen(false)} aria-label="Close menu"><X /></button></div>
             <nav aria-label="Mobile navigation">
               {links.map(([label, href], index) => (
