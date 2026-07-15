@@ -93,14 +93,14 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--cyan); outline-
 .gallery { background: var(--bg); }
 .gallery-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
 .gallery-card { position: relative; min-width: 0; aspect-ratio: 1; }
-.gallery-card button { position: relative; width: 100%; height: 100%; overflow: hidden; padding: 0; border: 0; background: #111; cursor: pointer; }
+.gallery-card :is(button, a) { position: relative; display: block; width: 100%; height: 100%; overflow: hidden; padding: 0; border: 0; background: #111; cursor: pointer; }
 .gallery-card img { object-fit: cover; transition: transform .75s cubic-bezier(.22,1,.36,1), filter .4s ease; }
-.gallery-card button::after { position: absolute; inset: 0; content: ""; background: linear-gradient(180deg, transparent 55%, rgba(5,5,7,.86)); }
-.gallery-card button > span { position: absolute; z-index: 2; bottom: 23px; left: 24px; display: grid; gap: 4px; text-align: left; }
+.gallery-card :is(button, a)::after { position: absolute; inset: 0; content: ""; background: linear-gradient(180deg, transparent 55%, rgba(5,5,7,.86)); }
+.gallery-card :is(button, a) > span { position: absolute; z-index: 2; bottom: 23px; left: 24px; display: grid; gap: 4px; text-align: left; }
 .gallery-card small { color: #cbc6cd; font-size: 8px; letter-spacing: .17em; text-transform: uppercase; }
 .gallery-card b { font-family: var(--font-serif), serif; font-size: 30px; font-weight: 400; }
 .gallery-card svg { position: absolute; z-index: 2; right: 22px; bottom: 25px; }
-.gallery-card button:hover img { transform: scale(1.035); filter: saturate(1.1); }
+.gallery-card :is(button, a):hover img { transform: scale(1.035); filter: saturate(1.1); }
 
 .services { background: var(--panel); }
 .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--edge); border-left: 1px solid var(--edge); margin-top: 90px; }
