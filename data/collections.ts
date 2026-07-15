@@ -56,7 +56,5 @@ export const galleryStories = [
   { ...collections[0] },
   { ...collections[4] },
   { ...collections[2] },
-  { ...collections[1] },
-  { ...collections[3] },
-  { ...collections[0], title: "Liquid Chrome", category: "Commercials", position: "75% center" }
+  { ...collections[1] }
 ];
