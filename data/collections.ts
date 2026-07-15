@@ -29,8 +29,8 @@ export const collections: Collection[] = [
   {
     title: "Object of Desire",
     category: "Products",
-    image: `${basePath}/assets/vr-automotive.png`,
-    alt: "Black performance coupe photographed on a wet studio road",
+    image: `${basePath}/assets/vr-perfume.png`,
+    alt: "Faceted luxury perfume bottle with dramatic violet lighting and an elegant woman in the background",
     accent: "#e76896",
     position: "center"
   },
