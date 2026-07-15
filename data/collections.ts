@@ -13,8 +13,8 @@ export const collections: Collection[] = [
   {
     title: "Prism Muse",
     category: "Photo Shoots",
-    image: `${basePath}/assets/vr-hero-prism.png`,
-    alt: "Wet-look editorial portrait with a violet iridescent collar",
+    image: `${basePath}/assets/vr-prism-red-beauty.png`,
+    alt: "Adult Mediterranean beauty model in ruby-red couture posing with one arm across her face",
     accent: "#e76896",
     position: "64% center"
   },
