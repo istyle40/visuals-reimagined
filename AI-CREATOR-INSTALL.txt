@@ -1,0 +1,10 @@
+VISUALS REIMAGINED — AI CREATOR UPDATE
+
+1. Extract this ZIP directly inside your local visuals-reimagined project folder.
+2. Allow Windows to merge folders and replace app/globals.css, .env.example, and components/admin/AdminNav.tsx.
+3. In GitHub Desktop, confirm the changed files belong to visuals-reimagined.
+4. Use the summary: Add private Grok AI image creator
+5. Click Commit to main, then Push origin.
+
+Do not place your xAI API key in GitHub.
+Add XAI_API_KEY privately in the environment settings of your server host.
