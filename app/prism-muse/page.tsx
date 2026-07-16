@@ -13,9 +13,9 @@ export const metadata: Metadata = {
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 const photos: PrismMusePhoto[] = [
-  { src: `${basePath}/assets/vr-prism-red-beauty.png`, alt: "Mediterranean fashion model in ruby-red couture covering half her face", title: "The Gaze", note: "Opening portrait", position: "64% center" },
+  { src: `${basePath}/assets/prism-muse-03-profile.png`, alt: "Side-profile beauty portrait with rainbow prism light", title: "Light Trace", note: "Opening portrait", position: "center 22%" },
+  { src: `${basePath}/assets/vr-prism-red-beauty.png`, alt: "Mediterranean fashion model in ruby-red couture covering half her face", title: "The Gaze", note: "Signature portrait", position: "64% center" },
   { src: `${basePath}/assets/prism-muse-02-full.png`, alt: "Full-length portrait of the model in a sculptural ruby gown", title: "Crimson Form", note: "Full-length study", position: "center 18%" },
-  { src: `${basePath}/assets/prism-muse-03-profile.png`, alt: "Side-profile beauty portrait with rainbow prism light", title: "Light Trace", note: "Profile and refraction", position: "center 22%" },
   { src: `${basePath}/assets/prism-muse-04-seated.png`, alt: "Model seated in a tailored red suit in a futuristic studio", title: "Poise", note: "Tailored editorial", position: "center 16%" },
   { src: `${basePath}/assets/prism-muse-05-detail.png`, alt: "Beauty detail of green eye, ruby jewellery and translucent red fabric", title: "Ruby Detail", note: "Beauty close-up", position: "center" },
   { src: `${basePath}/assets/prism-muse-06-mirror.png`, alt: "Model surrounded by fragmented mirror panels and coloured light", title: "Reflected Self", note: "Experimental portrait", position: "center 20%" }
