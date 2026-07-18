@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { Play } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -69,7 +70,11 @@ export function Hero() {
       </motion.div>
 
       <div id="collections" className="thumbs" role="tablist" aria-label="Featured collections">
-        {collections.slice(0, 4).map((item, index) => (
+        {collections.slice(0, 4).map((item, index) => item.category === "Photo Shoots" ? (
+          <Link key={item.title} href="/photoshoots" aria-label="Open the Photo Shoots gallery">
+            <Image src={item.image} alt="" fill sizes="130px" style={{ objectPosition: item.position }} /><span>{item.category}</span>
+          </Link>
+        ) : (
           <button key={item.title} role="tab" aria-selected={active === index} aria-label={`Show ${item.category}`} onClick={() => setActive(index)}>
             <Image src={item.image} alt="" fill sizes="130px" style={{ objectPosition: item.position }} /><span>{item.category}</span>
           </button>

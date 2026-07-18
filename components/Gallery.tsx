@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { useState } from "react";
@@ -21,10 +22,17 @@ export function Gallery() {
         {galleryStories.map((story, index) => (
           <motion.article key={`${story.title}-${index}`} className={`gallery-card card-${index + 1}`}
             initial={reduceMotion ? false : { opacity: 0, y: 34 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: .15 }} transition={{ duration: .65 }}>
-            <button onClick={() => setSelected(index)} aria-label={`Open ${story.title} project preview`}>
-              <Image src={story.image} alt={story.alt} fill sizes="(max-width: 700px) 100vw, 50vw" style={{ objectPosition: story.position }} />
-              <span><small>{story.category}</small><b>{story.title}</b></span><ArrowUpRight aria-hidden="true" />
-            </button>
+            {story.category === "Photo Shoots" ? (
+              <Link href="/photoshoots" aria-label="Open the Photo Shoots gallery">
+                <Image src={story.image} alt={story.alt} fill sizes="(max-width: 700px) 100vw, 50vw" style={{ objectPosition: story.position }} />
+                <span><small>{story.category}</small><b>{story.title}</b></span><ArrowUpRight aria-hidden="true" />
+              </Link>
+            ) : (
+              <button onClick={() => setSelected(index)} aria-label={`Open ${story.title} project preview`}>
+                <Image src={story.image} alt={story.alt} fill sizes="(max-width: 700px) 100vw, 50vw" style={{ objectPosition: story.position }} />
+                <span><small>{story.category}</small><b>{story.title}</b></span><ArrowUpRight aria-hidden="true" />
+              </button>
+            )}
           </motion.article>
         ))}
       </div>
