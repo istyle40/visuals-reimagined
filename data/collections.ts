@@ -21,10 +21,10 @@ export const collections: Collection[] = [
   {
     title: "Brand Alchemy",
     category: "Commercials",
-    image: `${basePath}/assets/vr-luxury-fashion.png`,
-    alt: "Fashion portrait in sculptural silver clothing under lavender light",
+    image: `${basePath}/assets/vr-knicole-brand-alchemy.webp`,
+    alt: "KNICOLE soft drink campaign poster with a glass bottle, ice cubes and dynamic splashing liquid",
     accent: "#8e6ad8",
-    position: "center 24%"
+    position: "center 58%"
   },
   {
     title: "Object of Desire",
@@ -37,10 +37,10 @@ export const collections: Collection[] = [
   {
     title: "Electric Youth",
     category: "Photo Shoots",
-    image: `${basePath}/assets/vr-neon-editorial.png`,
-    alt: "Contemporary portrait in a cobalt studio with lime light",
+    image: `${basePath}/assets/vr-red-hat-photoshoot.webp`,
+    alt: "High-fashion portrait of a woman wearing a dramatic red hat and red glove",
     accent: "#62c9ee",
-    position: "center 25%"
+    position: "center"
   },
   {
     title: "Threshold",

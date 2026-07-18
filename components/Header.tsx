@@ -6,8 +6,8 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Logo } from "./Logo";
 
 const links = [
-  ["Home", "#home"], ["Gallery", "#gallery"], ["Collections", "#collections"],
-  ["About", "#about"], ["Services", "#services"], ["Contact", "#contact"]
+  ["Home", "/#home"], ["Gallery", "/#gallery"], ["Collections", "/#collections"],
+  ["About", "/#about"], ["Services", "/#services"], ["Contact", "/#contact"]
 ];
 
 export function Header() {
